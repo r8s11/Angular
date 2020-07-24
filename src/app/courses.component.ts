@@ -1,3 +1,4 @@
+import { CoursesService } from './courses.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,12 +11,23 @@ import { Component } from '@angular/core';
                 </li>
                     
             </ul>
+            <button class="btn btn-primary" (click)="onSave($event)" >Save</button>
+
             
             `
 })
 
 export class CoursesComponent {
     title = 'List of courses';
-    courses = ["course1", "course2", "course3"];
+    courses;
+    isActive = true;
+    // tslint:disable-next-line: typedef
+    onSave($event) {
+        console.log('Button was clicked', $event)
+    }
+
+    constructor(service: CoursesService){
+        this.courses = service.getCourse();
+    }
 
 }
