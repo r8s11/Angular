@@ -9,6 +9,11 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +21,15 @@ import { FavoriteComponent } from './favorite/favorite.component';
     CoursesComponent,
     CourseComponent,
     AuthorsComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    ServerComponent,
+    ServersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [
     CoursesService,
