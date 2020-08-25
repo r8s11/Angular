@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
+  serverID = 10;
+  ServerStatus = 'online';
+  
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
