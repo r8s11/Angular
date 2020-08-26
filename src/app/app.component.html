@@ -4,6 +4,11 @@
 <br>
 <br>
 {{ post.title | titlecase}}
+<hr>
+<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></favorite>
+<hr>
+
+
 
 
 <!-- <app-servers></app-servers> -->

@@ -1,2 +1,10 @@
-<i class="fas fa-bacterium"></i>
-<button>Hello</button>
+
+<button (click)="onClick()">Hello</button>
+<hr>
+
+
+<i class="fa"
+[class.fa-star] = "isFavorite"
+[class.fa-star-o]="!isFavorite"
+(click)="onClick()"
+aria-hidden="true"></i>
